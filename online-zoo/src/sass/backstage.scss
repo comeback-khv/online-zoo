@@ -1,0 +1,46 @@
+.backstage {
+    padding-top: 142px;
+    height: 403px;
+    background-color: #E5E5E5;
+}
+
+.backstage__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.backstage__title {
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px
+}
+
+.backstage__img {
+    order: -1;
+}
+
+.backstage__text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #333B41;
+}
+
+.backstage__text:nth-last-child(1) {
+    line-height: 22px;
+}
+
+.backstage__subtitle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333B41;
+}

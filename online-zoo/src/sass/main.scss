@@ -1,0 +1,36 @@
+@import "./header.scss";
+@import "./watch-online.scss";
+@import "./backstage.scss";
+@import "./pets.scss";
+@import "./donate.scss";
+@import "./testimonials.scss";
+@import "./footer.scss";
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto
+}
+
+.button {
+    width: 298px;
+    height: 54px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 25px;
+    border: none;
+}

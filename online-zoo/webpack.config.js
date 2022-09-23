@@ -17,7 +17,7 @@ module.exports = {
         maxEntrypointSize: 512000
     },
     devServer: {
-        port: 9000,
+        port: 8000,
         compress: true,
         hot: true,
         static: {
@@ -28,10 +28,6 @@ module.exports = {
         rules: [
             {
                 test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
-            },
-            {
-                test: /\.s[ac]ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
@@ -46,5 +42,5 @@ module.exports = {
             filename: 'index.html',
             template: 'src/index.html'
         })
-    ]
+    ],
 };
