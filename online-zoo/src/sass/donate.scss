@@ -1,3 +1,114 @@
-.header {
-    
+.donate {
+    padding-top: 69px;
+    padding-bottom: 100px;
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    opacity: 0.9;
+}
+
+.donate__container {
+    padding-bottom: 59px;
+    background: rgba(253, 253, 255, 0.52);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+}
+
+.donate__title {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+}
+
+.donate__link {
+    text-decoration: none;
+    color: #FE9013;
+}
+
+.donate__text {
+    margin: 0;
+}
+
+.donate__text--first {
+    margin-bottom: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333B41;
+}
+
+.donate__text--second {
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #333B41;
+}
+
+.donate__text--third {
+    margin-bottom: 60px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #333B41;
+}
+
+.donate__subtitle {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 47px;
+    color: #333B41;
+}
+
+.donate__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 130px;
+    list-style: none;
+}
+
+.donate__img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 168px;
+    height: 168px;
+    border: 1px solid #FA6F32;
+    background-color: white;
+}
+
+.donate__item {}
+
+.donate__item-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.donate-item-text {
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.donate__button {
+    display: block;
+    margin: 0 auto;
 }

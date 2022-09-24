@@ -8,7 +8,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name][contenthash].js',
-        assetModuleFilename: 'assets/[hash][ext]',
+        assetModuleFilename: 'assets/[name][ext]',
         clean: true
     },
     performance: {
@@ -33,8 +33,15 @@ module.exports = {
             {
 
                 test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
-                type: 'asset/resource'
-            }
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/images/[name][ext]'
+                }
+            },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+            },
         ]
     },
     plugins: [

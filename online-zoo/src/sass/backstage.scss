@@ -1,17 +1,17 @@
 .backstage {
     padding-top: 142px;
-    height: 403px;
     background-color: #E5E5E5;
 }
 
 .backstage__container {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    gap: 87px;
+    //flex-wrap: wrap;
 }
 
 .backstage__title {
     margin: 0;
+    margin-bottom: 20px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -19,11 +19,10 @@
     line-height: 58px
 }
 
-.backstage__img {
-    order: -1;
-}
+.backstage__img {}
 
 .backstage__text {
+    margin: 0;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -32,11 +31,17 @@
     color: #333B41;
 }
 
-.backstage__text:nth-last-child(1) {
+.backstage__text--first {
+    margin-bottom: 54px;
+}
+
+.backstage__text--second {
     line-height: 22px;
 }
 
 .backstage__subtitle {
+    margin: 0;
+    margin-bottom: 34px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
