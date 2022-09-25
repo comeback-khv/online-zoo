@@ -1,6 +1,8 @@
 .watch-online {
+    margin-bottom: 140px;
     height: 700px;
     background-image: url(../assets/images/panda.jpg);
+    background-position: 0px -78px;
 }
 
 .watch-online__title {
@@ -11,6 +13,7 @@
     margin-right: 219.69px;
     margin-left: auto;
     margin-bottom: 60px;
+    text-align: center;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -27,5 +30,6 @@
 .watch-online__button {
     display: block;
     margin-left: auto;
-    margin-right: 319px;
+    margin-right: 317px;
+    border-radius: 25px;
 }

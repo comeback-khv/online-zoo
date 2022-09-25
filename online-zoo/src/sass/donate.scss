@@ -1,11 +1,13 @@
 .donate {
     padding-top: 69px;
     padding-bottom: 100px;
+    margin-bottom: 140px;
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     opacity: 0.9;
 }
 
 .donate__container {
+    padding-top: 41px;
     padding-bottom: 59px;
     background: rgba(253, 253, 255, 0.52);
     backdrop-filter: blur(2px);
@@ -31,6 +33,7 @@
 
 .donate__text {
     margin: 0;
+    padding-left: 99px;
 }
 
 .donate__text--first {
@@ -78,6 +81,7 @@
 .donate__list {
     margin: 0;
     padding: 0;
+    padding-left: 2px;
     display: flex;
     justify-content: center;
     gap: 130px;
@@ -88,14 +92,44 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 29.5px;
     width: 168px;
     height: 168px;
+    box-sizing: border-box;
     border: 1px solid #FA6F32;
+    border-radius: 5px;
     background-color: white;
 }
 
-.donate__item {}
+.donate__item {
+    position: relative;
+}
+
+.donate__item--first-step {}
+
+.donate__item--second-step {}
+
+.donate__item--third-step {}
+
+.donate__item--first-step::after {
+    content: "";
+    position: absolute;
+    top: 61px;
+    right: -100px;
+    width: 71px;
+    height: 37.08px;
+    background-image: url(../assets/images/donate-arrow.svg);
+}
+
+.donate__item--second-step::after {
+    content: "";
+    position: absolute;
+    top: 57px;
+    right: -100px;
+    width: 71px;
+    height: 37.08px;
+    background-image: url(../assets/images/donate-arrow.svg);
+}
 
 .donate__item-img {
     display: flex;
@@ -105,10 +139,19 @@
 
 .donate-item-text {
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 62px;
+    max-width: 170px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333B41;
 }
 
 .donate__button {
     display: block;
     margin: 0 auto;
+    padding-left: 10px;
+    border-radius: 25px;
 }
