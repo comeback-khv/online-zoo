@@ -37,6 +37,9 @@
 }
 
 .button:hover {
-    color: orange;
-    background: black;
+    background: #E47209;
+}
+
+.button:active {
+    background: #4B9200;
 }

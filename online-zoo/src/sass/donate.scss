@@ -66,6 +66,30 @@
     color: #333B41;
 }
 
+.donate__text--orange {
+    position: relative;
+}
+
+.donate__text--orange-link {
+    text-decoration: none;
+    color: #333B41;
+}
+
+.donate__text--orange-link:hover {
+    cursor: pointer;
+    color: #FE9013;
+}
+
+.donate__text--orange:after {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 1.4px;
+    width: 178px;
+    height: 1px;
+    background-color: #FE9013;
+}
+
 .donate__subtitle {
     text-align: center;
     margin: 0;

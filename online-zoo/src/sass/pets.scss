@@ -1,10 +1,62 @@
 .pets {
+    position: relative;
     padding-bottom: 100px;
     background-color: #FFFFFF;
 }
 
-.pets__list {
+.pets__container {
     display: flex;
+    max-width: 1314px;
+    margin: 0 auto;
+}
+
+.pets::before {
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    left: 0px;
+    width: 292px;
+    height: 460px;
+    background-image: url(../assets/images/pets-flower1.png);
+}
+
+.pets:after {
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    right: 0px;
+    width: 368px;
+    height: 275px;
+    background-image: url(../assets/images/pets-flower2.png);
+}
+
+.arrows__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -4px;
+    margin-left: -6px;
+    margin-top: 404px;
+    width: 120px;
+    height: 62px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 125px;
+}
+
+.arrows__container:hover {
+    background: #4B9200;
+    cursor: pointer;
+}
+
+.arrows__container:active {
+    background: #4B9200;
+    cursor: pointer;
+}
+
+.pets__list {
+    position: relative;
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     column-gap: 30px;
     row-gap: 20px;
@@ -14,10 +66,6 @@
     list-style: none;
 }
 
-.pets__list::before {
-
-}
-
 .pets__item {
     position: relative;
     width: 366px;
@@ -25,6 +73,24 @@
     box-sizing: border-box;
     border: 1px solid #FA6F32;
     border-radius: 5px;
+    overflow: hidden;
+}
+
+.pets__item:hover .pets__img {
+    width: calc(100% + 10px);
+    transition: 1s;
+}
+
+.pets__item:hover .pets__name {
+    transform: translate(0px, -70px);
+    color: #FFFFFF;
+    transition: 1s;
+}
+
+.pets__item:hover .pets__text {
+    transform: translate(0px, -70px);
+    color: #FFFFFF;
+    transition: 1s;
 }
 
 .pets__item--herbivore::before {
@@ -70,6 +136,12 @@
 .pets__img {
     margin-bottom: 4px;
     border-radius: 4px;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.pets__img:hover {
+    filter: brightness(60%);
 }
 
 .pets__name {
@@ -82,6 +154,7 @@
     line-height: 20px;
     text-transform: uppercase;
     color: #000000;
+    transition: 1s;
 }
 
 .pets__text {
@@ -93,6 +166,7 @@
     font-size: 15px;
     line-height: 18px;
     color: #000000;
+    transition: 1s;
 }
 
 .pets__button {

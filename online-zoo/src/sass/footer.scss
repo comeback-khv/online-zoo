@@ -49,6 +49,47 @@
     line-height: 22px;
     color: #BDBDBD;
     background-color: #111115;
+    outline: none;
+}
+
+.footer__subscribe-input:invalid:not(:focus):not(:placeholder-shown) {
+    color: #D31414;
+    border-color: #D31414;
+}
+
+.footer__subscribe-input:invalid:not(:focus):not(:placeholder-shown)~.foooter__subscribe-button {
+    color: #D31414;
+    border-color: #D31414;
+}
+
+.footer__subscribe-input:invalid:not(:placeholder-shown) {
+    color: #D31414;
+    border-color: #D31414;
+}
+
+.footer__subscribe-input:invalid:not(:placeholder-shown)~.foooter__subscribe-button {
+    color: #D31414;
+    border-color: #D31414;
+}
+
+.footer__subscribe-input:valid:not(:focus):not(:placeholder-shown) {
+    color: #4B9200;
+    border-color: #4B9200;
+}
+
+.footer__subscribe-input:valid:not(:focus):not(:placeholder-shown)~.foooter__subscribe-button {
+    color: #4B9200;
+    border-color: #4B9200;
+}
+
+.footer__subscribe-input:valid:not(:placeholder-shown) {
+    color: #4B9200;
+    border-color: #4B9200;
+}
+
+.footer__subscribe-input:valid:not(:placeholder-shown)~.foooter__subscribe-button {
+    color: #4B9200;
+    border-color: #4B9200;
 }
 
 .footer__subscribe-input::placeholder {
@@ -73,6 +114,13 @@
     font-size: 16px;
     line-height: 22px;
     color: #4B9200;
+}
+
+.foooter__subscribe-button:hover {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
 }
 
 .footer__button {
@@ -121,6 +169,10 @@
     background: rgba(196, 196, 196, 0.5);
 }
 
+.footer__img-container:hover {
+    background: #4B9200;
+}
+
 .footer__social-img {}
 
 .footer__social-link {
@@ -128,17 +180,25 @@
     color: #FFFFFF;
 }
 
+.footer__social-link:hover {
+    color: #4B9200;
+}
+
+//.footer__social-link:hover .footer__img-container {
+//    color: #4B9200;
+//}
+
 .footer__social-link--facebook {
     padding-top: 5px;
 }
 
-.nav {}
+.footer__social-img-twitter {
+    padding-top: 3px;
+}
 
-.nav__list {}
-
-.nav__item {}
-
-.nav__link {}
+.footer__social-img--instagram {
+    padding-top: 4px;
+}
 
 .footer__nav {
     margin-top: auto;
@@ -172,6 +232,18 @@
 
 .footer__copyright-text {
     margin: 0;
+}
+
+.footer__copyright:hover {
+    color: #4B9200;
+    cursor: pointer;
+    background-color: white;
+}
+
+.footer__copyright:active {
+    color: #4B9200;
+    cursor: pointer;
+    background-color: white;
 }
 
 .footer__copyright-text--first {

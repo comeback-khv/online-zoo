@@ -6,6 +6,7 @@
 }
 
 .watch-online__title {
+    position: relative;
     width: 500.31px;
     height: 400px;
     padding-top: 86px;
@@ -21,6 +22,19 @@
     line-height: 80px;
     text-transform: uppercase;
     color: #FFFFFF;
+    z-index: 1;
+}
+
+.watch-online__title::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -72px;
+    width: 465px;
+    height: 465px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 250px;
+    z-index: -1;
 }
 
 .watch-online__title--yellow {

@@ -11,6 +11,15 @@ module.exports = {
         assetModuleFilename: 'assets/[name][ext]',
         clean: true
     },
+    entry: {
+        filename: path.resolve(__dirname, 'src/donate.js')
+    },
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name][contenthash].js',
+        assetModuleFilename: 'assets/[name][ext]',
+        clean: true
+    },
     performance: {
         hints: false,
         maxAssetSize: 512000,
@@ -48,6 +57,10 @@ module.exports = {
         new htmlWebpackPlugin({
             filename: 'index.html',
             template: 'src/index.html'
+        }),
+        new htmlWebpackPlugin({
+            filename: 'donate.html',
+            template: 'src/donate.html'
         })
     ],
 };
