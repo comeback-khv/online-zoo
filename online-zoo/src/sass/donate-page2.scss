@@ -1,0 +1,243 @@
+.donate {
+    padding-top: 40px;
+    padding-bottom: 181px;
+    margin-bottom: 0;
+}
+
+.donate__title {
+    margin-right: 11px;
+    margin-bottom: 22px;
+}
+
+.donate__text--first {
+    margin-bottom: 61px;
+    padding-left: 93px;
+}
+
+.donation__title-help {
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 47px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.donation__title-help-text {
+    margin: 0;
+    margin-bottom: 48px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.donation__title-info {
+    margin: 0;
+    margin-bottom: 58px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 47px;
+    color: #FE9013;
+}
+
+.donate__diet-number {
+    margin: 0;
+    margin-bottom: 11px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 58px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.donate__diet-text {
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #333B41;
+}
+
+.donation__title {
+    margin-bottom: 20px
+}
+
+.donate__panda {
+    margin-right: 6px;
+    margin-bottom: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 89px;
+}
+
+.donate__share-text {
+    margin: 0;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333B41;
+}
+
+.donate__amount {
+    position: relative;
+    width: 976px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.donate__amount-range {
+    width: 915px;
+    height: 2px;
+    -webkit-appearance: none;
+    background: #404950;
+}
+
+.donate__amount::before {
+    position: absolute;
+    content: "";
+    left: 0px;
+    top: 9px;
+    width: 976px;
+    height: 27px;
+    background: #404950;
+    border-radius: 2px;
+    z-index: -1;
+}
+
+.donate__amount::after {
+    position: absolute;
+    content: "";
+    left: 28px;
+    top: 23px;
+    width: 915px;
+    height: 2px;
+    background: #72828e;
+    z-index: -1;
+}
+
+.donate__diet {
+    position: relative;
+}
+
+.donate__diet::after {
+    position: absolute;
+    content: "";
+    left: 170px;
+    top: 31px;
+    width: 14px;
+    height: 14px;
+    background-image: url(../assets/images/icon-x.svg);
+}
+
+.donate__amount-range-container {}
+
+.donate__amount-input {
+    padding-left: 10px;
+    margin-bottom: 25px;
+    width: 268px;
+    height: 54px;
+    box-sizing: border-box;
+    border: 1px solid #929699;
+    border-radius: 2px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #929699;
+    background-color: transparent;
+    outline: none;
+}
+
+.donate__amount-input:invalid:not(:focus):not(:placeholder-shown) {
+    color: #D31414;
+    border-color: #D31414;
+}
+
+.donate__amount-input:invalid:not(:placeholder-shown) {
+    color: #D31414;
+    border-color: #D31414;
+}
+
+.donate__amount-input:valid:not(:focus):not(:placeholder-shown) {
+    color: #4B9200;
+    border-color: #4B9200;
+}
+
+.donate__amount-input:valid:not(:placeholder-shown) {
+    color: #4B9200;
+    border-color: #4B9200;
+}
+
+.donate__radiobuttons-label {
+    margin-right: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333B41;
+}
+
+.donate__radiobuttons {
+    margin-bottom: 31px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.donate__radiobuttons--first {
+    padding-left: 5px;
+}
+
+.donate__amount-datalist {
+    padding-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 72px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #333B41;
+}
+
+.donate__amount-datalist-option {
+    position: relative;
+    margin-bottom: 47px;
+}
+
+.donate__amount-datalist-option:after {
+    position: absolute;
+    content: "";
+    left: 14px;
+    top: -20px;
+    width: 10px;
+    height: 10px;
+    background: #FFEE2E;
+    border-radius: 50%;
+}
+
+.donate__button {
+    margin-bottom: 31px;
+}
