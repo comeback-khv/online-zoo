@@ -59,7 +59,7 @@ module.exports = {
             template: 'src/index.html'
         }),
         new htmlWebpackPlugin({
-            filename: 'donate.html',
+           filename: 'donate.html',
             template: 'src/donate.html'
         })
     ],
