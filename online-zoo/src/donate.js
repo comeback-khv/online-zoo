@@ -1,4 +1,3 @@
-import './sass/main.scss';
 import './sass/main-page2.scss';
 
 const donateOption = document.querySelectorAll('.donate__amount-range-container');

@@ -8,7 +8,7 @@
 
 .donate__container {
     padding-top: 41px;
-    padding-bottom: 27px;
+    padding-bottom: 56px;
     background: rgba(253, 253, 255, 0.52);
     backdrop-filter: blur(2px);
     border-radius: 20px;
@@ -64,6 +64,7 @@
     font-size: 16px;
     line-height: 21px;
     color: #333B41;
+    max-width: 870px;
 }
 
 .donate__text--orange {
@@ -129,6 +130,12 @@
     position: relative;
 }
 
+.donate__item--first-step {}
+
+.donate__item--second-step {}
+
+.donate__item--third-step {}
+
 .donate__item--first-step::after {
     content: "";
     position: absolute;
@@ -172,4 +179,43 @@
     margin: 0 auto;
     padding-left: 10px;
     border-radius: 25px;
+}
+
+@media screen and (max-width:1000px) {
+    .donate {
+        padding-top: 29px;
+        padding-bottom: 45px;
+        margin-bottom: 105px;
+    }
+
+    .donate__container {
+        padding-top: 30px;
+        padding-bottom: 52px;
+    }
+
+    .donate__text {
+        padding-left: 49px;
+    }
+
+    .donate__title {
+        margin-bottom: 21px;
+    }
+
+    .donate__text--first {
+        margin-bottom: 19px;
+    }
+
+    .donate__text--second {
+        max-width: 813px;
+    }
+
+    .donate__text--third {
+        max-width: 861px;
+        margin-bottom: 41px;
+    }
+
+    .donate-item-text {
+        margin-bottom: 72px;
+    }
+
 }

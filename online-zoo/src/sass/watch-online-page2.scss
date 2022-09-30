@@ -5,3 +5,10 @@
     background-position: center -195px;
     background-repeat: no-repeat;
 }
+
+@media screen and (max-width:1000px) {
+    .watch-online2 {
+        background-image: url(../assets/images/panda-page2-1000.png);
+        background-position: center 0px;
+    }
+}

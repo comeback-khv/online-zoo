@@ -1,7 +1,7 @@
 .backstage {
     position: relative;
-    margin-bottom: 175px;
     background-color: #FFFFFF;
+    margin-bottom: 172px;
 }
 
 .backstage::after {
@@ -13,12 +13,22 @@
     height: 613px;
     background-image: url(../assets/images/backstage-flower.png);
     background-repeat: no-repeat;
+    opacity: 1;
+    transition: 0.5s;
 }
 
 .backstage__container {
     display: flex;
     gap: 86px;
-    //flex-wrap: wrap;
+}
+
+.backstage__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.right-column {
+    width: 465px;
 }
 
 .backstage__title {
@@ -60,4 +70,31 @@
     font-size: 24px;
     line-height: 29px;
     color: #333B41;
+}
+
+@media screen and (max-width: 1540px) {
+    .backstage::after {
+        opacity: 0;
+        transition: 0.5s;
+    }
+}
+
+@media screen and (max-width:1000px) {
+
+
+    .backstage {
+        margin-bottom: 143px;
+    }
+
+    .right-column {
+        width: 611px;
+    }
+
+    .left-column {
+        padding-top: 9px
+    }
+
+    .backstage__container {
+        gap: 28px
+    }
 }

@@ -1,6 +1,6 @@
 .watch-online {
     margin-bottom: 140px;
-    height: 700px;
+    padding-bottom: 100px;
     background-image: url(../assets/images/panda.jpg);
     background-position: center -78px;
     background-repeat: no-repeat;
@@ -47,4 +47,33 @@
     margin-left: auto;
     margin-right: 317px;
     border-radius: 25px;
+}
+
+@media screen and (max-width:1000px) {
+    .watch-online {
+        background-image: url(../assets/images/panda-1000.jpg);
+        padding-bottom: 48px;
+        margin-bottom: 100px;
+    }
+
+    .watch-online__title::before {
+        width: 367px;
+        height: 367px;
+        top: -11px;
+        left: -58px;
+    }
+
+    .watch-online__title {
+        font-size: 85px;
+        line-height: 64px;
+        width: 400.25px;
+        height: 320px;
+        margin-right: 86.69px;
+        padding-top: 43px;
+        margin-bottom: 39px;
+    }
+
+    .watch-online__button {
+        margin-right: 136px;
+    }
 }

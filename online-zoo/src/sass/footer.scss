@@ -6,6 +6,7 @@
 
 .footer__container {
     display: grid;
+    grid-template-columns: min-content;
 }
 
 .footer__logo {
@@ -19,7 +20,7 @@
 
 .footer__subscribe {
     margin-left: auto;
-    grid-column-start: 3;
+    grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
@@ -184,10 +185,6 @@
     color: #4B9200;
 }
 
-//.footer__social-link:hover .footer__img-container {
-//    color: #4B9200;
-//}
-
 .footer__social-link--facebook {
     padding-top: 5px;
 }
@@ -203,7 +200,7 @@
 .footer__nav {
     margin-top: auto;
     margin-bottom: 11px;
-    padding-left: 87px;
+    padding-left: 16px;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
