@@ -20,6 +20,7 @@
 
 .logo {
     position: relative;
+    display: inline-block;
     box-sizing: border-box;
     padding-top: 3px;
     width: 82px;
@@ -41,7 +42,7 @@
     background-clip: text;
 }
 
-.logo::before {
+.header__title::before {
     content: "";
     width: 12.03px;
     height: 20.98px;
@@ -122,8 +123,74 @@
     background-clip: text;
 }
 
+.burger {
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 11px;
+    gap: 2px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger__line {
+    width: 18px;
+    height: 2px;
+    background: #FFFFFF;
+    border-radius: 2px;
+}
+
 @media screen and (max-width:1000px) {
     .nav__item {
         margin-right: 48px;
     }
+}
+
+@media screen and (max-width:640px) {
+    .header-container {
+        min-height: 34px
+    }
+
+    .header {
+        width: 100%;
+        position: fixed;
+    }
+
+    .header__title {
+        padding-top: 0;
+        width: 46.86px;
+        height: 29.03px;
+        font-size: 12.2899px;
+        line-height: 15px;
+        border: none;
+    }
+
+    .header__title::before {
+        background-image: url(../assets/images/bamboo-1000.svg);
+        width: 8.03px;
+        height: 13.98px;
+        left: 3.13px;
+        bottom: 1.79px;
+
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header-copyright {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .burger {
+        right: 10px;
+        top: 12px;
+    }
+
 }

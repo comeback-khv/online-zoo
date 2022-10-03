@@ -5,7 +5,7 @@
 }
 
 .pets__container {
-    display: flex;
+    display: block;
     max-width: 1314px;
     margin: 0 auto;
 }
@@ -30,23 +30,12 @@
     background-image: url(../assets/images/pets-flower2.png);
 }
 
-
-.arrows__container-left {
-    position: absolute;
-    top: 402px;
-    left: 137px;
-}
-
-.arrows__container-right {
-    position: absolute;
-    top: 402px;
-    right: 140px;
-}
-
 .arrows__container {
-    display: flex;
     justify-content: center;
     align-items: center;
+    display: grid;
+    grid-row-start: 2;
+    grid-row-end: 3;
     width: 62px;
     height: 62px;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -63,21 +52,38 @@
     cursor: pointer;
 }
 
+.arrows__container-left {
+    position: absolute;
+    top: 400px;
+    left: 139px;
+}
+
+.arrows__container-right {
+    position: absolute;
+    top: 400px;
+    right: 139px;
+}
+
 .pets__list {
     position: relative;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
     column-gap: 30px;
     row-gap: 20px;
     margin: 0;
-    margin-bottom: 81px;
+    // margin-bottom: 81px;
     padding: 0;
     list-style: none;
 }
 
 .pets__item {
     position: relative;
+    justify-self: center;
     max-width: 366px;
     max-height: 426px;
     box-sizing: border-box;
@@ -185,6 +191,7 @@
 .pets__button {
     display: block;
     margin: 0 auto;
+    margin-top: 81px;
     padding-left: 9px;
     border-radius: 25px;
 }
@@ -204,8 +211,34 @@
 }
 
 @media screen and (max-width: 1570px) {
+    .pets__container {
+        display: grid;
+    }
+
+    .pets__list {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
     .pets__list {
         row-gap: 91px;
+    }
+
+    .arrows__container {
+        grid-column-start: 1;
+    }
+
+    .arrows__container-left {
+        position: relative;
+        top: 0;
+        left: 322px;
+    }
+
+    .arrows__container-right {
+        top: 0;
+        right: 321px;
+        position: relative;
+        margin-left: auto;
     }
 }
 
@@ -213,5 +246,132 @@
 @media screen and (max-width: 1000px) {
     .pets {
         padding-bottom: 142px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .pets {
+        padding-bottom: 100px;
+    }
+
+    .pets::before {
+        width: 134px;
+        height: 202px;
+        background-image: url(../assets/images/pets-flower1-640.png);
+    }
+
+    .pets::after {
+        width: 175px;
+        height: 131px;
+        background-image: url(../assets/images/pets-flower2-640.png);
+    }
+
+    .pets__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pets__item {
+        width: 285px;
+        height: 332px;
+    }
+
+    .pets__item:nth-child(5) {
+        display: none;
+    }
+
+    .pets__item:nth-child(6) {
+        display: none;
+    }
+
+    .pets__button {
+        margin-top: 61px;
+    }
+
+    .arrows__container-left {
+        top: -4px;
+        left: 223px;
+    }
+
+    .arrows__container-right {
+        top: -4px;
+        right: 223px;
+    }
+
+    .pets__name {
+        padding-left: 10px;
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .pets__text {
+        font-size: 12px;
+        line-height: 13px;
+        padding-left: 10px;
+    }
+
+    .pets__img {
+        margin-bottom: 5px;
+    }
+
+    .pets__item--herbivore::after {
+        bottom: 12px;
+        right: 7px;
+    }
+
+    .pets__item--herbivore::before {
+        bottom: 11px;
+        right: 13px;
+    }
+
+    .pets__item--carnivore::after {
+        bottom: 11px;
+        right: 3px;
+    }
+
+    .pets__item--carnivore::before {
+        bottom: 13px;
+        right: 13px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .pets__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pets__list {
+        row-gap: 20px;
+    }
+
+    .arrows__container {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 490px) {
+    .pets::before {
+        width: 80px;
+        height: 72px;
+        background-repeat: no-repeat;
+        background-image: url(../assets/images/pets-flower1-320.png);
+    }
+
+    .pets::after {
+        bottom: -3px;
+        width: 69px;
+        height: 71px;
+        background-repeat: no-repeat;
+        background-image: url(../assets/images/pets-flower2-320.png);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .pets {
+        padding-bottom: 61px;
+    }
+
+    .pets .button {
+        margin-top: 20px;
     }
 }

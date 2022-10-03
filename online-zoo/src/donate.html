@@ -11,12 +11,12 @@
 <body class="body">
     <header class="header">
         <div class="container header-container">
-            <a href="./index.html" class="logo__link">
+            <a href="./index.html" class="logo__link  logo__header-link">
                 <h1 class="header__title logo">
                     PetStory online
                 </h1>
             </a>
-            <nav class="nav">
+            <nav class="nav header__nav">
                 <ul class="nav__list">
                     <li class="nav__item">
                         <a href="./index.html" class="nav__link nav__link--about2">About</a>
@@ -38,6 +38,11 @@
             <a class="header-copyright"
                 href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by
                 &copy</a>
+            <div class="burger">
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+            </div>
         </div>
     </header>
     <main class="main">
@@ -70,7 +75,7 @@
                         <p class="donate__diet-number">4</p>
                         <p class="donate__diet-text">Panda diet for the day.</p>
                     </div>
-                    <img src="./assets/images/panda.svg" alt="Panda" class="donate__panda">
+                    <img src="./assets/images/panda.svg" alt="Panda" class="donate__panda-img">
                 </div>
                 <div class="donate__amount">
                     <p class="donate__amount-text">Amount</p>
@@ -84,8 +89,7 @@
                             <label class="donate__amount-range-label" for="2000"></label>
                         </div>
                         <div class="donate__amount-range-container">
-                            <input type="radio" id="1000" class="donate__amount-range-input" name="donate__range"
-                                checked>
+                            <input type="radio" id="1000" class="donate__amount-range-input" name="donate__range">
                             <label class="donate__amount-range-label" for="1000"></label>
                         </div>
                         <div class="donate__amount-range-container">
@@ -97,7 +101,7 @@
                             <label class="donate__amount-range-label" for="250"></label>
                         </div>
                         <div class="donate__amount-range-container">
-                            <input type="radio" id="100" class="donate__amount-range-input" name="donate__range">
+                            <input type="radio" id="100" class="donate__amount-range-input" name="donate__range" checked>
                             <label class="donate__amount-range-label" for="100"></label>
                         </div>
                         <div class="donate__amount-range-container">
@@ -115,21 +119,23 @@
                         <span class="donate__price-dollar">$</span>5000</span>
                     <span class="donate__price donate__price--2000">
                         <span class="donate__price-dollar">$</span>2000</span>
-                    <span class="donate__price donate__price--1000 donate__price--active">
+                    <span class="donate__price donate__price--1000">
                         <span class="donate__price-dollar">$</span>1000</span>
                     <span class="donate__price donate__price--500">
                         <span class="donate__price-dollar">$</span>500</span>
                     <span class="donate__price donate__price--250">
                         <span class="donate__price-dollar">$</span>250</span>
-                    <span class="donate__price donate__price--100">
+                    <span class="donate__price donate__price--100 donate__price--active">
                         <span class="donate__price-dollar">$</span>100</span>
                     <span class="donate__price donate__price--50">
                         <span class="donate__price-dollar">$</span>50</span>
                     <span class="donate__price donate__price--25">
                         <span class="donate__price-dollar">$</span>25</span>
                 </div>
-                <div class="donate__amount-input-container">
-                    <input type="number" value="" placeholder="Another amount" class="donate__amount-input">
+                <div class="donate__amount-input-wrapper">
+                    <div class="donate__amount-input-container">
+                        <input type="number" value="" placeholder="Another amount" class="donate__amount-input">
+                    </div>
                 </div>
                 <div class="donate__radiobuttons">
                     <div class="donate__radiobuttons--first">
@@ -152,7 +158,7 @@
     </main>
     <footer class="footer">
         <div class="container footer__container">
-            <a href="./index.html" class="logo__link">
+            <a href="./index.html" class="logo__link  logo__footer-link">
                 <div class="footer__logo logo">
                     PetStory online
                 </div>
@@ -171,7 +177,8 @@
             <ul class="footer__social-list">
                 <li class="footer__social-item">
                     <div class="footer__img-container">
-                        <a href="https://www.facebook.com" class="footer__social-link footer__social-link--facebook">
+                        <a href="https://www.facebook.com"
+                            class="footer__social-img-link footer__social-link--facebook">
                             <img src="./assets/images/icon-facebook.svg" alt="Facebook"
                                 class="footer__social-img footer__social-img--facebook" width="8" height="16">
                         </a>
@@ -181,7 +188,7 @@
                 </li>
                 <li class="footer__social-item">
                     <div class="footer__img-container">
-                        <a href="https://www.twitter.com" class="footer__social-link footer__social-link--twitter">
+                        <a href="https://www.twitter.com" class="footer__social-img-link footer__social-link--twitter">
                             <img src="./assets/images/icon-twitter.svg" alt="Twitter"
                                 class="footer__social-img footer__social-img-twitter" width="16" height="14">
                         </a>
@@ -191,7 +198,8 @@
                 </li>
                 <li class="footer__social-item">
                     <div class="footer__img-container">
-                        <a href="https://www.instagram.com" class="footer__social-link footer__social-link--instagram">
+                        <a href="https://www.instagram.com"
+                            class="footer__social-img-link footer__social-link--instagram">
                             <img src="./assets/images/icon-instagram.svg" alt="Instagram"
                                 class="footer__social-img footer__social-img--instagram" width="16" height="16">
                         </a>
@@ -201,7 +209,7 @@
                 </li>
                 <li class="footer__social-item">
                     <div class="footer__img-container">
-                        <a href="https://www.youtube.com" class="footer__social-link footer__social-link--youtube">
+                        <a href="https://www.youtube.com" class="footer__social-img-link footer__social-link--youtube">
                             <img src="./assets/images/icon-youtube.svg" alt="Youtube"
                                 class="footer__social-img footer__social-img--youtube" width="18" height="13">
                         </a>
@@ -210,7 +218,7 @@
                         class="footer__social-link footer__social-link--youtube">YouTube</a>
                 </li>
             </ul>
-            <nav class="nav footer__nav">
+            <nav class="nav footer__nav footer__nav2">
                 <ul class="nav__list footer__nav-list">
                     <li class="nav__item">
                         <a href="./index.html" class="nav__link nav__link--about2">About</a>

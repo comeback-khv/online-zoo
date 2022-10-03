@@ -77,3 +77,77 @@
         margin-right: 136px;
     }
 }
+
+@media screen and (max-width:640px) {
+    .watch-online {
+        padding-top: 34px;
+        padding-bottom: 40px;
+        margin-bottom: 60px;
+        background-image: url(../assets/images/panda-640.jpg);
+        background-position: center 0px;
+    }
+
+    .watch-online__title::before {
+        width: 237.6px;
+        height: 237.6px;
+        top: 10px;
+        left: -35px;
+    }
+
+    .watch-online__title {
+        height: auto;
+        width: 255.64px;
+        margin-right: 18px;
+        margin-bottom: -9px;
+        padding-top: 49px;
+        font-size: 54.2894px;
+        line-height: 41px;
+    }
+
+    .watch-online__button {
+        margin-right: 321px;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .watch-online__title {
+        margin-bottom: 60px;
+        font-size: 30px;
+        line-height: 21px;
+        width: 128.13px;
+        margin-right: 100px;
+        padding-top: 41px;
+    }
+
+    .watch-online__title::before {
+        width: 140px;
+        height: 140px;
+        top: 22px;
+        left: -30px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .watch-online {
+        padding-bottom: 0px;
+        margin-bottom: 32px;
+        background-image: url(../assets/images/panda-320.jpg);
+        background-position: center 34px;
+    }
+
+    .watch-online__title {
+        margin-bottom: 60px;
+        font-size: 28px;
+        line-height: 21px;
+        width: 128.13px;
+        margin-right: 10px;
+        padding-top: 41px;
+    }
+
+    .watch-online__title::before {
+        width: 119px;
+        height: 119px;
+        top: 22px;
+        left: -19px;
+    }
+}

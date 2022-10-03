@@ -8,7 +8,23 @@
 
 @media screen and (max-width:1000px) {
     .watch-online2 {
-        background-image: url(../assets/images/panda-page2-1000.png);
+        background-image: url(../assets/images/panda-page2-1000.jpg);
         background-position: center 0px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .watch-online2 {
+        padding-top: 35px;
+        height: 335px;
+        background-image: url(../assets/images/panda-page2-640.jpg);
+        background-position: center 34px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .watch-online2 {
+        height: 187px;
+        background-image: url(../assets/images/panda-page2-320.jpg);
     }
 }

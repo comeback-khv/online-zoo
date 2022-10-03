@@ -11,4 +11,7 @@ for (let i = 0; i < donateOption.length; i++) {
         }
         donatePrice[i].classList.add('donate__price--active');
     })
+  //  if (!donatePrice[i].classList.contains('donate__price--active')) {
+  //      donatePrice[5].classList.add('donate__price--active')
+  //  }
 }

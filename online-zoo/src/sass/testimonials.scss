@@ -189,6 +189,14 @@
         padding-bottom: 141px;
     }
 
+    .testimonials__item-container {
+        margin: 0;
+        margin-bottom: 19px;
+        padding-left: 16px;
+        padding-top: 14px;
+        max-width: 255px
+    }
+
     .testimonials__title {
         margin-bottom: 29px;
     }
@@ -222,5 +230,98 @@
 
     .testimonials__input-range::-webkit-slider-thumb {
         width: 75px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .testimonials {
+        padding-bottom: 80px;
+    }
+
+    .testimonials::after {
+        width: 116px;
+        height: 135px;
+        background-image: url(../assets/images/testimonials-flower-640.png);
+    }
+
+    .testimonials__item {
+        width: 600px;
+        height: 109px;
+    }
+
+    .testimonials__item-text {
+        height: 38px;
+        overflow: hidden;
+    }
+
+    .testimonials__item-container {
+        max-width: 600px;
+        padding-left: 13px;
+        padding-top: 14px;
+    }
+
+    .testimonials__list {
+        gap: 16px;
+        margin-bottom: 39px;
+    }
+
+    .testimonials .button {
+        width: 240px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .testimonials__input-range {
+        display: none;
+    }
+
+    .testimonials__item-container {
+        padding-left: 12px;
+        padding-top: 14px;
+    }
+
+    .testimonials__item-text {
+        padding-left: 6px;
+    }
+
+    .testimonials__item-day {
+        margin-bottom: 11px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .testimonials::after {
+        width: 51px;
+        height: 65px;
+        background-image: url(../assets/images/testimonials-flower-320.png);
+    }
+}
+
+@media screen and (max-width:320px) {
+    .testimonials__title {
+        margin-bottom: 19px;
+        font-size: 24px;
+        line-height: 29px
+    }
+
+    .testimonials__list {
+        margin-bottom: 29px;
+    }
+
+    .testimonials {
+        padding-bottom: 59px;
+    }
+
+    .testimonials__item-container {
+        padding-left: 12px;
+        padding-top: 11px;
+    }
+
+    .testimonials__item-text {
+        padding-left: 6px;
+    }
+
+    .testimonials__item-day {
+        margin-bottom: 9px;
     }
 }
