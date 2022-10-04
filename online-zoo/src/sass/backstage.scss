@@ -77,12 +77,20 @@
 
 @media screen and (max-width: 1540px) {
     .backstage::after {
-        opacity: 0;
-        transition: 0.5s;
+        width: 35px;
+        height: 215px;
+        top: 0px;
+        opacity: 1;
+        background-image: url(../assets/images/backstage-flower-320.png);
     }
 }
 
 @media screen and (max-width:1000px) {
+    .backstage::after {
+        opacity: 0;
+        transition: 0.5s;
+    }
+
     .backstage {
         margin-bottom: 143px;
     }
@@ -101,15 +109,12 @@
 }
 
 @media screen and (max-width:700px) {
-    .left-column {
-        display: none;
-        transition: 1s;
-    }
-
     .right-column {
         width: 495px;
     }
+}
 
+@media screen and (max-width:640px) {
     .backstage::after {
         width: 131px;
         height: 476px;
@@ -117,9 +122,12 @@
         opacity: 1;
         background-image: url(../assets/images/backstage-flower-640.png);
     }
-}
 
-@media screen and (max-width:640px) {
+    .left-column {
+        display: none;
+        transition: 1s;
+    }
+
     .backstage {
         margin-bottom: 80px;
     }

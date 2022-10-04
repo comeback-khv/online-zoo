@@ -266,22 +266,6 @@
         background-image: url(../assets/images/pets-flower2-640.png);
     }
 
-    .pets__list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .pets__item {
-        width: 285px;
-        height: 332px;
-    }
-
-    .pets__item:nth-child(5) {
-        display: none;
-    }
-
-    .pets__item:nth-child(6) {
-        display: none;
-    }
 
     .pets__button {
         margin-top: 61px;
@@ -304,7 +288,7 @@
     }
 
     .pets__text {
-        font-size: 12px;
+        font-size: 9px;
         line-height: 13px;
         padding-left: 10px;
     }
@@ -334,20 +318,48 @@
     }
 }
 
-@media screen and (max-width: 620px) {
-    .pets__list {
-        grid-template-columns: repeat(1, 1fr);
+@media screen and (max-width: 640px) {
+    .pets__text {
+        font-size: 12px;
     }
 
     .pets__list {
-        row-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .arrows__container {
+    .pets__item {
+        max-width: 285px;
+        max-height: 332px;
+    }
+
+    .pets__item:nth-child(5) {
+        display: none;
+    }
+
+    .pets__item:nth-child(6) {
         display: none;
     }
 }
 
+@media screen and (max-width: 622px) {
+    .arrows__container-left {
+        top: -4px;
+        left: 60px;
+    }
+
+    .arrows__container-right {
+        top: -4px;
+        right: 60px;
+    }
+
+    .pets__name {
+        font-size: 9px;
+    }
+
+    .pets__text {
+        font-size: 8px;
+    }
+}
 
 @media screen and (max-width: 490px) {
     .pets::before {
@@ -366,7 +378,44 @@
     }
 }
 
+@media screen and (max-width: 384px) {
+    .pets__text {
+        height: 15px;
+        width: 76px;
+    }
+}
+
 @media screen and (max-width: 320px) {
+    .pets__text {
+        height: unset;
+        width: unset;
+    }
+
+    .pets__name {
+        font-size: 13px;
+    }
+
+    .pets__text {
+        font-size: 12px;
+    }
+
+    .pets__item {
+        width: 285px;
+        height: 332px;
+    }
+
+    .pets__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pets__list {
+        row-gap: 20px;
+    }
+
+    .arrows__container {
+        display: none;
+    }
+
     .pets {
         padding-bottom: 61px;
     }
