@@ -8,11 +8,29 @@
 @import "./footer.scss";
 
 .body {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
     margin: 0;
+}
+
+.body--active {
+    overflow: hidden;
+}
+
+.body--active::after {
+    content: "";
+    background: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 100%;
 }
 
 .container {
