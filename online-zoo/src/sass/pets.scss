@@ -1,3 +1,39 @@
+@keyframes toLeft {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: 100vw;
+    }
+}
+
+@keyframes toRight {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: -100vw;
+    }
+}
+
+.animLeft {
+    animation: toLeft 2s;
+}
+
+.animRight {
+    animation: toRight 2s;
+}
+
+.transformRight {
+    transform: translateX(100vw)
+}
+
+.transformLeft {
+    transform: translateX(-100vw)
+}
+
 .pets {
     position: relative;
     padding-bottom: 100px;
@@ -40,6 +76,7 @@
     height: 62px;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     border-radius: 125px;
+    z-index: 2;
 }
 
 .arrows__container:hover {
@@ -90,6 +127,14 @@
     border: 1px solid #FA6F32;
     border-radius: 5px;
     overflow: hidden;
+}
+
+.pets__item:nth-last-child(1) {
+    display: none;
+}
+
+.pets__item:nth-last-child(2) {
+    display: none;
 }
 
 .pets__item:hover .pets__img {
