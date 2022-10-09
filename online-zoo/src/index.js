@@ -1,11 +1,10 @@
 // Import
 import './sass/main.scss';
-
 const headerNavList = document.querySelector('.header__nav-list');
 const headerTitle = document.querySelector('.header__title');
 const headerCopyright = document.querySelector('.header-copyright');
 const burger = document.querySelector('.burger');
-const xIcon = document.querySelector('.x-icon');
+const xIconBurger = document.querySelector('.header__x-icon');
 const body = document.querySelector('.body');
 const arrowLeft = document.querySelector('.arrows__container-left');
 const arrowRight = document.querySelector('.arrows__container-right');
@@ -17,7 +16,7 @@ function openMenu() {
     headerNavList.classList.add('header__nav-list--active');
     headerTitle.classList.add('header__title--active');
     headerCopyright.classList.add('header-copyright--active');
-    xIcon.classList.add('x-icon--active');
+    xIconBurger.classList.add('x-icon--active');
     body.classList.add('body--active');
 }
 
@@ -25,18 +24,20 @@ function closeMenu() {
     headerNavList.classList.remove('header__nav-list--active');
     headerTitle.classList.remove('header__title--active');
     headerCopyright.classList.remove('header-copyright--active');
-    xIcon.classList.remove('x-icon--active');
+    xIconBurger.classList.remove('x-icon--active');
     body.classList.remove('body--active');
 }
 burger.addEventListener('click', openMenu);
-xIcon.addEventListener('click', closeMenu);
+xIconBurger.addEventListener('click', closeMenu);
+
 document.addEventListener('click', (event => {
     if (event.target.classList.contains('body--active')) {
         closeMenu();
+        closeTestimonial();
     }
 }))
 
-// Slider
+// Pets slider
 
 let cards = [
     { name: 'Giant pandas', location: 'Native to Southwest China', picture: './assets/images/pets-giant-pandas.jpg', class: 'pets__item--herbivore' },
@@ -135,3 +136,56 @@ cardsList.addEventListener('animationend', () => {
 }
 )
 
+// Testimonials popup
+const testimonialItem = document.querySelectorAll('.testimonials__item');
+const testimonialText = document.querySelectorAll('.testimonials__item-text');
+const xIconTestimonial = document.querySelector('.testimonials__item-x-icon')
+
+function openTestimonial() {
+    for (let i = 0; i < testimonialItem.length; i++) {
+        testimonialItem[i].addEventListener('click', () => {
+            testimonialItem[i].classList.add('testimonials__item--active')
+            testimonialText[i].classList.add('testimonials__item-text--active')
+            body.classList.add('body--active');
+            console.log('e2')
+        })
+    }
+}
+function closeTestimonial() {
+    for (let i = 0; i < testimonialItem.length; i++) {
+        testimonialItem[i].classList.remove('testimonials__item--active')
+        testimonialText[i].classList.remove('testimonials__item-text--active');
+
+    }
+    console.log('e1')
+}
+
+if (document.documentElement.clientWidth < 999) {
+    xIconTestimonial.addEventListener('click', closeTestimonial);
+    openTestimonial();
+}
+
+// Testimonials slider
+const testimonialRange = document.querySelector('.testimonials__input-range');
+if (document.documentElement.clientWidth > 1223) {
+    testimonialRange.oninput = function () {
+        for (let i = 0; i < testimonialItem.length; i++) {
+            testimonialItem[i].style.transform = 'translateX(' + `${-297 * this.value}px`;
+        }
+    }
+}
+if (document.documentElement.clientWidth > 900) {
+    testimonialRange.oninput = function () {
+        for (let i = 0; i < testimonialItem.length; i++) {
+            testimonialItem[i].style.transform = 'translateX(' + `${-323 * this.value}px`;
+        }
+    }
+}
+
+// Testimonials slider
+//const testimonialRange = document.querySelector('.testimonials__input-range');
+//testimonialRange.oninput = function () {
+//    for (let i = 0; i < testimonialItem.length; i++) {
+//        testimonialItem[i].style.transform = 'translateX(' + `${-290 * this.value}px`;
+//    }
+//}

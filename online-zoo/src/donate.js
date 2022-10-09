@@ -37,3 +37,4 @@ donateInput.oninput = function () {
 }
 
 
+console.log('da')

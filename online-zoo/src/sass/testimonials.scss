@@ -29,15 +29,17 @@
 
 .testimonials__list {
     display: flex;
-    flex-wrap: wrap;
+    //    flex-wrap: wrap;
     gap: 30px;
     list-style: none;
     padding: 0;
     margin: 0;
     margin-bottom: 21px;
+    overflow: hidden;
 }
 
 .testimonials__item {
+    max-height: 391px;
     position: relative;
     width: 267px;
     background: #F1F3F2;
@@ -66,8 +68,9 @@
 .testimonials__item-container {
     display: grid;
     grid-template-columns: min-content 106px auto;
-    max-width: 237px;
-    margin: 0 auto;
+    width: 237px;
+    margin-left: 16px;
+    margin-right: 15px;
     padding-top: 15px;
     margin-bottom: 19px;
 }
@@ -148,6 +151,7 @@
     height: 8px;
     background: #F5F7F6;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .testimonials__input-range:before {
@@ -184,33 +188,34 @@
     border-radius: 5px;
 }
 
-@media screen and (max-width:1000px) {
-    .testimonials {
-        padding-bottom: 141px;
-    }
-
+@media screen and (max-width:1223px) {
     .testimonials__item-container {
         margin: 0;
         margin-bottom: 19px;
         padding-left: 16px;
         padding-top: 14px;
-        max-width: 255px
-    }
-
-    .testimonials__title {
-        margin-bottom: 29px;
+        margin-right: 22px;
+        width: 255px;
     }
 
     .testimonials__list {
+        margin: 0 auto;
         margin-bottom: 18px;
+        max-width: 939px;
     }
 
     .testimonials__item {
         width: 293px;
     }
+}
 
-    .testimonials__item--4 {
-        display: none;
+@media screen and (max-width:1000px) {
+    .testimonials {
+        padding-bottom: 141px;
+    }
+
+    .testimonials__title {
+        margin-bottom: 29px;
     }
 
     .testimonials__input-range {
@@ -233,6 +238,83 @@
     }
 }
 
+@media screen and (max-width:999px) {
+    .testimonials__item-x-icon {
+        display: flex;
+    }
+
+    .testimonials__input-range {
+        display: none;
+    }
+
+    .testimonials__item-container {
+        margin: 0 auto;
+        width: auto;
+        max-width: 600px;
+        padding-left: 12px;
+        padding-top: 14px;
+    }
+
+    .testimonials__item {
+        width: 600px;
+        height: 109px;
+        cursor: pointer;
+        transform: none;
+    }
+
+    .testimonials__item-text {
+        height: 38px;
+        overflow: hidden;
+    }
+
+    .testimonials__list {
+        gap: 16px;
+        margin-bottom: 39px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .testimonials__item-text {
+        padding-left: 6px;
+    }
+
+    .testimonials__item-day {
+        margin-bottom: 11px;
+    }
+
+    .testimonials__item:nth-child(4) {
+        display: none;
+    }
+
+    .testimonials__item:nth-child(5) {
+        display: none;
+    }
+
+    .testimonials__item:nth-child(6) {
+        display: none;
+    }
+
+    .testimonials__item:nth-child(7) {
+        display: none;
+    }
+
+    .testimonials__item:nth-child(8) {
+        display: none;
+    }
+
+    .testimonials__item:nth-child(9) {
+        display: none;
+    }
+
+    .testimonials__item:nth-child(10) {
+        display: none;
+    }
+
+    .testimonials__item:nth-child(11) {
+        display: none;
+    }
+}
+
 @media screen and (max-width:640px) {
     .testimonials {
         padding-bottom: 80px;
@@ -244,27 +326,6 @@
         background-image: url(../assets/images/testimonials-flower-640.png);
     }
 
-    .testimonials__item {
-        width: 600px;
-        height: 109px;
-    }
-
-    .testimonials__item-text {
-        height: 38px;
-        overflow: hidden;
-    }
-
-    .testimonials__item-container {
-        max-width: 600px;
-        padding-left: 13px;
-        padding-top: 14px;
-    }
-
-    .testimonials__list {
-        gap: 16px;
-        margin-bottom: 39px;
-    }
-
     .testimonials .button {
         width: 240px;
         display: block;
@@ -273,19 +334,6 @@
 
     .testimonials__input-range {
         display: none;
-    }
-
-    .testimonials__item-container {
-        padding-left: 12px;
-        padding-top: 14px;
-    }
-
-    .testimonials__item-text {
-        padding-left: 6px;
-    }
-
-    .testimonials__item-day {
-        margin-bottom: 11px;
     }
 }
 
@@ -324,4 +372,26 @@
     .testimonials__item-day {
         margin-bottom: 9px;
     }
+}
+
+.testimonials__item--active {
+    width: 320px;
+    height: 428px;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.testimonials__item-text--active {
+    height: auto;
+    max-width: 297px;
+    overflow: auto;
+}
+
+.testimonials__item-x-icon {
+    right: 56px;
 }
