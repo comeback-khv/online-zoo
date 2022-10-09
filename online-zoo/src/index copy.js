@@ -37,7 +37,7 @@ document.addEventListener('click', (event => {
     }
 }))
 
-//Pets slider
+// Pets slider
 
 let cards = [
     { name: 'Giant pandas', location: 'Native to Southwest China', picture: './assets/images/pets-giant-pandas.jpg', class: 'pets__item--herbivore' },
@@ -73,6 +73,7 @@ function createNewCards() {
         card.appendChild(location);
         cardsList.appendChild(card);
     }
+
 }
 
 function createNewCardList(animSide, tranformSide) {
@@ -123,20 +124,18 @@ function moveLeft() {
     cardsList.classList.add('animLeft');
     createNewCardList('animLeft', 'transformLeft');
 }
-if (arrowRight && arrowLeft) {
-    arrowRight.addEventListener('click', moveRight);
+arrowRight.addEventListener('click', moveRight)
+arrowLeft.addEventListener('click', moveLeft)
+cardsList.addEventListener('animationend', () => {
+    arrowRight.addEventListener('click', moveRight)
     arrowLeft.addEventListener('click', moveLeft)
-
-    cardsList.addEventListener('animationend', () => {
-        arrowRight.addEventListener('click', moveRight)
-        arrowLeft.addEventListener('click', moveLeft)
-        cardsList.classList.remove('animLeft');
-        cardsList.classList.remove('animRight');
-        deleteOldCardList();
-        createNewCards();
-    }
-    )
+    cardsList.classList.remove('animLeft');
+    cardsList.classList.remove('animRight');
+    deleteOldCardList();
+    createNewCards();
 }
+)
+
 // Testimonials popup
 const testimonialItem = document.querySelectorAll('.testimonials__item');
 const testimonialText = document.querySelectorAll('.testimonials__item-text');
@@ -160,45 +159,42 @@ function closeTestimonial() {
     }
     console.log('e1')
 }
-if (xIconTestimonial) {
+xIconTestimonial.addEventListener('click', closeTestimonial);
+if (document.documentElement.clientWidth < 999) {
     xIconTestimonial.addEventListener('click', closeTestimonial);
-    if (document.documentElement.clientWidth < 999) {
-        xIconTestimonial.addEventListener('click', closeTestimonial);
-        openTestimonial();
-    }
+    openTestimonial();
 }
 
 //Testimonials slider
 const testimonialRange = document.querySelector('.testimonials__input-range');
-if (testimonialRange) {
-    testimonialRange.oninput = function () {
-        let sliderValue = this.value;
-        for (let i = 0; i < testimonialItem.length; i++) {
-            let width = (window.getComputedStyle(testimonialItem[i]).width).slice(0, 3)
-            testimonialItem[i].style.transform = 'translateX(' + `${(-width - 30) * sliderValue}px`;
-        }
-    }
-    let isEvent = false;
-    window.onresize = () => {
-        if (document.documentElement.clientWidth < 1224 && isEvent == true) {
-            testimonialRange.value = 0;
-                for (let i = 0; i < testimonialItem.length; i++) {
-                    testimonialItem[i].style.transform = 'translateX(0px)';
-                }
-            isEvent = false;
-        }
-        if (document.documentElement.clientWidth > 1224 && isEvent == false) {
-            testimonialRange.value = 0;
-                for (let i = 0; i < testimonialItem.length; i++) {
-                    testimonialItem[i].style.transform = 'translateX(0px)';
-                }
-            isEvent = true;
-        }
-        if (document.documentElement.clientWidth < 999) {
-            testimonialRange.value = 0;
-                for (let i = 0; i < testimonialItem.length; i++) {
-                    testimonialItem[i].style.transform = 'translateX(0px)';
-                }
-        }
+testimonialRange.oninput = function () {
+    let sliderValue = this.value;
+    for (let i = 0; i < testimonialItem.length; i++) {
+        let width = (window.getComputedStyle(testimonialItem[i]).width).slice(0, 3)
+        testimonialItem[i].style.transform = 'translateX(' + `${(-width - 30) * sliderValue}px`;
     }
 }
+let isEvent = false;
+window.onresize = () => {
+    if (document.documentElement.clientWidth < 1224 && isEvent == true) {
+        testimonialRange.value = 0;
+            for (let i = 0; i < testimonialItem.length; i++) {
+                testimonialItem[i].style.transform = 'translateX(0px)';
+            }
+        isEvent = false;
+    }
+    if (document.documentElement.clientWidth > 1224 && isEvent == false) {
+        testimonialRange.value = 0;
+            for (let i = 0; i < testimonialItem.length; i++) {
+                testimonialItem[i].style.transform = 'translateX(0px)';
+            }
+        isEvent = true;
+    }
+    if (document.documentElement.clientWidth < 999) {
+        testimonialRange.value = 0;
+            for (let i = 0; i < testimonialItem.length; i++) {
+                testimonialItem[i].style.transform = 'translateX(0px)';
+            }
+    }
+}
+

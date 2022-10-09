@@ -20,21 +20,19 @@ function setOption() {
     }
 }
 setOption()
-
-donateInput.oninput = function () {
-    this.value = this.value.substr(0, 4);
-    let inputValue = this.value;
-    for (let i = 0; i < donateOption.length; i++) {
-        if (inputValue == donateOption[i].id) {
-            for (let i = 0; i < donateOption.length; i++) {
-                donatePrice[i].classList.remove('donate__price--active');
-                donateLabel[i].classList.remove('donate__amount-range-label--active');
+if (donateInput) {
+    donateInput.oninput = function () {
+        this.value = this.value.substr(0, 4);
+        let inputValue = this.value;
+        for (let i = 0; i < donateOption.length; i++) {
+            if (inputValue == donateOption[i].id) {
+                for (let i = 0; i < donateOption.length; i++) {
+                    donatePrice[i].classList.remove('donate__price--active');
+                    donateLabel[i].classList.remove('donate__amount-range-label--active');
+                }
+                donatePrice[i].classList.add('donate__price--active');
+                donateLabel[i].classList.add('donate__amount-range-label--active');
             }
-            donatePrice[i].classList.add('donate__price--active');
-            donateLabel[i].classList.add('donate__amount-range-label--active');
         }
     }
 }
-
-
-console.log('da')
