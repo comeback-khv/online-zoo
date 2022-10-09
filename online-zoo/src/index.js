@@ -154,7 +154,6 @@ function openTestimonial() {
         testimonialText[i].classList.add('testimonials__item-text--active');
         xIconTestimonial[i].style.opacity = '1';
         body.classList.add('body--active');
-        console.log('Кликаем на итем')
       }
     })
   }
@@ -170,7 +169,6 @@ function closeTestimonial() {
       isTestimonial = false;
     }, 1)
   }
-  console.log('Закрываем')
 }
 if (xIconTestimonial) {
   if (xIconTestimonial) {

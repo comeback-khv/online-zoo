@@ -239,9 +239,6 @@
 }
 
 @media screen and (max-width:999px) {
-    .testimonials__item-x-icon {
-        display: flex;
-    }
 
     .testimonials__input-range {
         display: none;
@@ -392,6 +389,7 @@
 }
 
 .testimonials__item-x-icon {
+    display: flex;
     opacity: 0;
     right: 56px;
 }
