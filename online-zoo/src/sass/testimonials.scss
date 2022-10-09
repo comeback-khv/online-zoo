@@ -258,7 +258,6 @@
     .testimonials__item {
         width: 600px;
         height: 109px;
-        cursor: pointer;
         transform: none;
     }
 
@@ -393,5 +392,6 @@
 }
 
 .testimonials__item-x-icon {
+    opacity: 0;
     right: 56px;
 }

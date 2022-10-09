@@ -138,61 +138,74 @@ if (arrowRight && arrowLeft) {
 // Testimonials popup
 const testimonialItem = document.querySelectorAll('.testimonials__item');
 const testimonialText = document.querySelectorAll('.testimonials__item-text');
-const xIconTestimonial = document.querySelector('.testimonials__item-x-icon')
+const xIconTestimonial = document.querySelectorAll('.testimonials__item-x-icon')
 
+let isTestimonial = false;
 function openTestimonial() {
   for (let i = 0; i < testimonialItem.length; i++) {
     testimonialItem[i].addEventListener('click', () => {
-      testimonialItem[i].classList.add('testimonials__item--active')
-      testimonialText[i].classList.add('testimonials__item-text--active')
-      body.classList.add('body--active');
-      console.log('e2')
+      if (isTestimonial == false) {
+        isTestimonial = true
+        testimonialItem[i].classList.add('testimonials__item--active')
+        testimonialText[i].classList.add('testimonials__item-text--active');
+        xIconTestimonial[i].style.opacity = '1';
+        body.classList.add('body--active');
+        console.log('Кликаем на итем')
+      }
     })
   }
 }
+openTestimonial();
 function closeTestimonial() {
   for (let i = 0; i < testimonialItem.length; i++) {
     testimonialItem[i].classList.remove('testimonials__item--active')
     testimonialText[i].classList.remove('testimonials__item-text--active');
+    xIconTestimonial[i].style.opacity = '0';
+    body.classList.remove('body--active');
+    setTimeout(function () {
+      isTestimonial = false;
+    }, 1)
   }
-  console.log('e1')
+  console.log('Закрываем')
 }
 if (xIconTestimonial) {
-  xIconTestimonial.addEventListener('click', closeTestimonial);
-  openTestimonial();
-}
+  for (let i = 0; i < testimonialItem.length; i++) {
+    xIconTestimonial[i].addEventListener('click', closeTestimonial);
+    }
+  }
 
-//Testimonials slider
-const testimonialRange = document.querySelector('.testimonials__input-range');
-if (testimonialRange) {
-  testimonialRange.oninput = function () {
-    let sliderValue = this.value;
-    for (let i = 0; i < testimonialItem.length; i++) {
-      let width = (window.getComputedStyle(testimonialItem[i]).width).slice(0, 3)
-      testimonialItem[i].style.transform = 'translateX(' + `${(-width - 30) * sliderValue}px`;
+  //Testimonials slider
+  const testimonialRange = document.querySelector('.testimonials__input-range');
+  if (testimonialRange) {
+    testimonialRange.oninput = function () {
+      let sliderValue = this.value;
+      for (let i = 0; i < testimonialItem.length; i++) {
+        let width = (window.getComputedStyle(testimonialItem[i]).width).slice(0, 3)
+        testimonialItem[i].style.transform = 'translateX(' + `${(-width - 30) * sliderValue}px`;
+        testimonialItem[i].style.transition = '1s';
+      }
+    }
+    let isEvent = false;
+    window.onresize = () => {
+      if (document.documentElement.clientWidth < 1224 && isEvent == true) {
+        testimonialRange.value = 0;
+        for (let i = 0; i < testimonialItem.length; i++) {
+          testimonialItem[i].style.removeProperty('transform');
+        }
+        isEvent = false;
+      }
+      if (document.documentElement.clientWidth > 1224 && isEvent == false) {
+        testimonialRange.value = 0;
+        for (let i = 0; i < testimonialItem.length; i++) {
+          testimonialItem[i].style.removeProperty('transform');
+        }
+        isEvent = true;
+      }
+      if (document.documentElement.clientWidth < 999) {
+        testimonialRange.value = 0;
+        for (let i = 0; i < testimonialItem.length; i++) {
+          testimonialItem[i].style.removeProperty('transform');
+        }
+      }
     }
   }
-  let isEvent = false;
-  window.onresize = () => {
-    if (document.documentElement.clientWidth < 1224 && isEvent == true) {
-      testimonialRange.value = 0;
-      for (let i = 0; i < testimonialItem.length; i++) {
-        testimonialItem[i].style.removeProperty('transform');
-      }
-      isEvent = false;
-    }
-    if (document.documentElement.clientWidth > 1224 && isEvent == false) {
-      testimonialRange.value = 0;
-      for (let i = 0; i < testimonialItem.length; i++) {
-        testimonialItem[i].style.removeProperty('transform');
-      }
-      isEvent = true;
-    }
-    if (document.documentElement.clientWidth < 999) {
-      testimonialRange.value = 0;
-      for (let i = 0; i < testimonialItem.length; i++) {
-        testimonialItem[i].style.removeProperty('transform');
-      }
-    }
-  }
-}
