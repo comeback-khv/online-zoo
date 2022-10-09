@@ -13,129 +13,127 @@ const petsContainer = document.querySelector('.pets__container');
 
 // Menu
 function openMenu() {
-    headerNavList.classList.add('header__nav-list--active');
-    headerTitle.classList.add('header__title--active');
-    headerCopyright.classList.add('header-copyright--active');
-    xIconBurger.classList.add('x-icon--active');
-    body.classList.add('body--active');
+  headerNavList.classList.add('header__nav-list--active');
+  headerTitle.classList.add('header__title--active');
+  headerCopyright.classList.add('header-copyright--active');
+  xIconBurger.classList.add('x-icon--active');
+  body.classList.add('body--active');
 }
 
 function closeMenu() {
-    headerNavList.classList.remove('header__nav-list--active');
-    headerTitle.classList.remove('header__title--active');
-    headerCopyright.classList.remove('header-copyright--active');
-    xIconBurger.classList.remove('x-icon--active');
-    body.classList.remove('body--active');
+  headerNavList.classList.remove('header__nav-list--active');
+  headerTitle.classList.remove('header__title--active');
+  headerCopyright.classList.remove('header-copyright--active');
+  xIconBurger.classList.remove('x-icon--active');
+  body.classList.remove('body--active');
 }
 burger.addEventListener('click', openMenu);
 xIconBurger.addEventListener('click', closeMenu);
 
 document.addEventListener('click', (event => {
-    if (event.target.classList.contains('body--active')) {
-        closeMenu();
-        closeTestimonial();
-    }
+  if (event.target.classList.contains('body--active')) {
+    closeMenu();
+    closeTestimonial();
+  }
 }))
 
 //Pets slider
 
 let cards = [
-    { name: 'Giant pandas', location: 'Native to Southwest China', picture: './assets/images/pets-giant-pandas.jpg', class: 'pets__item--herbivore' },
-    { name: 'Eagles', location: 'Native to South America', picture: './assets/images/pets-eagles.jpg', class: 'pets__item--carnivore' },
-    { name: 'Gorillas', location: 'Native to Congo', picture: './assets/images/pets-gorillas.jpg', class: 'pets__item--herbivore' },
-    { name: 'Two-toed Sloth', location: 'Mesoamerica, South America', picture: './assets/images/pets-two-toed-sloth.jpg', class: 'pets__item--herbivore' },
-    { name: 'Cheetahs', location: 'Native to Africa', picture: './assets/images/pets-cheetahs.jpg', class: 'pets__item--carnivore' },
-    { name: 'Penguins', location: 'Native to South America', picture: './assets/images/pets-penguins.jpg', class: 'pets__item--carnivore' },
-    { name: 'Alligators', location: 'Native to Southwest China', picture: './assets/images/pets-alligators.jpg', class: 'pets__item--carnivore' },
-    { name: 'Gorillas', location: 'Native to Congo', picture: './assets/images/pets-gorillas2.jpg', class: 'pets__item--herbivore' },
+  { name: 'Giant pandas', location: 'Native to Southwest China', picture: './assets/images/pets-giant-pandas.jpg', class: 'pets__item--herbivore' },
+  { name: 'Eagles', location: 'Native to South America', picture: './assets/images/pets-eagles.jpg', class: 'pets__item--carnivore' },
+  { name: 'Gorillas', location: 'Native to Congo', picture: './assets/images/pets-gorillas.jpg', class: 'pets__item--herbivore' },
+  { name: 'Two-toed Sloth', location: 'Mesoamerica, South America', picture: './assets/images/pets-two-toed-sloth.jpg', class: 'pets__item--herbivore' },
+  { name: 'Cheetahs', location: 'Native to Africa', picture: './assets/images/pets-cheetahs.jpg', class: 'pets__item--carnivore' },
+  { name: 'Penguins', location: 'Native to South America', picture: './assets/images/pets-penguins.jpg', class: 'pets__item--carnivore' },
+  { name: 'Alligators', location: 'Native to Southwest China', picture: './assets/images/pets-alligators.jpg', class: 'pets__item--carnivore' },
+  { name: 'Gorillas', location: 'Native to Congo', picture: './assets/images/pets-gorillas2.jpg', class: 'pets__item--herbivore' },
 ]
 
 function randomCards() {
-    return cards.sort(() => Math.random() - 0.5)
+  return cards.sort(() => Math.random() - 0.5)
 }
 
 function createNewCards() {
-    for (let i = 0; i <= cards.length; i++) {
-        let card = document.createElement('li');
-        let name = document.createElement('p');
-        let location = document.createElement('p');
-        let picture = document.createElement('img');
-        name.innerHTML = cards[i].name;
-        location.innerHTML = cards[i].location;
-        picture.setAttribute('src', `${cards[i].picture}`)
-        card.classList.add('pets__item');
-        card.classList.add(cards[i].class)
-        name.classList.add('pets__name')
-        location.classList.add('pets__text')
-        picture.classList.add('pets__img')
-        card.appendChild(picture);
-        card.appendChild(name);
-        card.appendChild(location);
-        cardsList.appendChild(card);
-    }
+  for (let i = 0; i <= cards.length; i++) {
+    let card = document.createElement('li');
+    let name = document.createElement('p');
+    let location = document.createElement('p');
+    let picture = document.createElement('img');
+    name.innerHTML = cards[i].name;
+    location.innerHTML = cards[i].location;
+    picture.setAttribute('src', `${cards[i].picture}`)
+    card.classList.add('pets__item');
+    card.classList.add(cards[i].class)
+    name.classList.add('pets__name')
+    location.classList.add('pets__text')
+    picture.classList.add('pets__img')
+    card.appendChild(picture);
+    card.appendChild(name);
+    card.appendChild(location);
+    cardsList.appendChild(card);
+  }
 }
 
 function createNewCardList(animSide, tranformSide) {
-    let cardsListNew = document.createElement('ul');
-    cardsListNew.classList.add('pets__list');
-    cardsListNew.classList.add(animSide);
-    cardsListNew.classList.add(tranformSide);
-    petsContainer.appendChild(cardsListNew);
-    for (let i = 0; i <= cards.length; i++) {
-        let card = document.createElement('li');
-        let name = document.createElement('p');
-        let location = document.createElement('p');
-        let picture = document.createElement('img')
-        name.innerHTML = cards[i].name;
-        location.innerHTML = cards[i].location;
-        picture.setAttribute('src', `${cards[i].picture}`)
-        card.classList.add('pets__item');
-        card.classList.add(cards[i].class);
-        name.classList.add('pets__name')
-        location.classList.add('pets__text')
-        picture.classList.add('pets__img')
-        card.appendChild(picture);
-        card.appendChild(name);
-        card.appendChild(location);
-        cardsListNew.appendChild(card);
-        setTimeout(function () {
-            cardsListNew.remove();
-        }, 2000)
-    }
+  let cardsListNew = document.createElement('ul');
+  cardsListNew.classList.add('pets__list');
+  cardsListNew.classList.add(animSide);
+  cardsListNew.classList.add(tranformSide);
+  petsContainer.appendChild(cardsListNew);
+  for (let i = 0; i <= cards.length; i++) {
+    let card = document.createElement('li');
+    let name = document.createElement('p');
+    let location = document.createElement('p');
+    let picture = document.createElement('img')
+    name.innerHTML = cards[i].name;
+    location.innerHTML = cards[i].location;
+    picture.setAttribute('src', `${cards[i].picture}`)
+    card.classList.add('pets__item');
+    card.classList.add(cards[i].class);
+    name.classList.add('pets__name')
+    location.classList.add('pets__text')
+    picture.classList.add('pets__img')
+    card.appendChild(picture);
+    card.appendChild(name);
+    card.appendChild(location);
+    cardsListNew.appendChild(card);
+    setTimeout(function () {
+      cardsListNew.remove();
+    }, 2000)
+  }
 }
 function deleteOldCardList() {
-    for (let i = 0; i <= 7; i++) {
-        cardsList.removeChild(cardsList.firstChild);
-    }
+  for (let i = 0; i <= 7; i++) {
+    cardsList.removeChild(cardsList.firstChild);
+  }
 }
 function moveRight() {
-    arrowRight.removeEventListener('click', moveRight)
-    arrowLeft.removeEventListener('click', moveLeft)
-    randomCards();
-    cardsList.classList.add('animRight');
-    createNewCardList('animRight', 'transformRight');
+  arrowRight.removeEventListener('click', moveRight)
+  arrowLeft.removeEventListener('click', moveLeft)
+  randomCards();
+  cardsList.classList.add('animRight');
+  createNewCardList('animRight', 'transformRight');
 }
 
 function moveLeft() {
-    arrowRight.removeEventListener('click', moveRight)
-    arrowLeft.removeEventListener('click', moveLeft)
-    randomCards()
-    cardsList.classList.add('animLeft');
-    createNewCardList('animLeft', 'transformLeft');
+  arrowRight.removeEventListener('click', moveRight)
+  arrowLeft.removeEventListener('click', moveLeft)
+  randomCards()
+  cardsList.classList.add('animLeft');
+  createNewCardList('animLeft', 'transformLeft');
 }
 if (arrowRight && arrowLeft) {
-    arrowRight.addEventListener('click', moveRight);
+  arrowRight.addEventListener('click', moveRight);
+  arrowLeft.addEventListener('click', moveLeft)
+  cardsList.addEventListener('animationend', () => {
+    arrowRight.addEventListener('click', moveRight)
     arrowLeft.addEventListener('click', moveLeft)
-
-    cardsList.addEventListener('animationend', () => {
-        arrowRight.addEventListener('click', moveRight)
-        arrowLeft.addEventListener('click', moveLeft)
-        cardsList.classList.remove('animLeft');
-        cardsList.classList.remove('animRight');
-        deleteOldCardList();
-        createNewCards();
-    }
-    )
+    cardsList.classList.remove('animLeft');
+    cardsList.classList.remove('animRight');
+    deleteOldCardList();
+    createNewCards();
+  })
 }
 // Testimonials popup
 const testimonialItem = document.querySelectorAll('.testimonials__item');
@@ -143,62 +141,58 @@ const testimonialText = document.querySelectorAll('.testimonials__item-text');
 const xIconTestimonial = document.querySelector('.testimonials__item-x-icon')
 
 function openTestimonial() {
-    for (let i = 0; i < testimonialItem.length; i++) {
-        testimonialItem[i].addEventListener('click', () => {
-            testimonialItem[i].classList.add('testimonials__item--active')
-            testimonialText[i].classList.add('testimonials__item-text--active')
-            body.classList.add('body--active');
-            console.log('e2')
-        })
-    }
+  for (let i = 0; i < testimonialItem.length; i++) {
+    testimonialItem[i].addEventListener('click', () => {
+      testimonialItem[i].classList.add('testimonials__item--active')
+      testimonialText[i].classList.add('testimonials__item-text--active')
+      body.classList.add('body--active');
+      console.log('e2')
+    })
+  }
 }
 function closeTestimonial() {
-    for (let i = 0; i < testimonialItem.length; i++) {
-        testimonialItem[i].classList.remove('testimonials__item--active')
-        testimonialText[i].classList.remove('testimonials__item-text--active');
-
-    }
-    console.log('e1')
+  for (let i = 0; i < testimonialItem.length; i++) {
+    testimonialItem[i].classList.remove('testimonials__item--active')
+    testimonialText[i].classList.remove('testimonials__item-text--active');
+  }
+  console.log('e1')
 }
 if (xIconTestimonial) {
-    xIconTestimonial.addEventListener('click', closeTestimonial);
-    if (document.documentElement.clientWidth < 999) {
-        xIconTestimonial.addEventListener('click', closeTestimonial);
-        openTestimonial();
-    }
+  xIconTestimonial.addEventListener('click', closeTestimonial);
+  openTestimonial();
 }
 
 //Testimonials slider
 const testimonialRange = document.querySelector('.testimonials__input-range');
 if (testimonialRange) {
-    testimonialRange.oninput = function () {
-        let sliderValue = this.value;
-        for (let i = 0; i < testimonialItem.length; i++) {
-            let width = (window.getComputedStyle(testimonialItem[i]).width).slice(0, 3)
-            testimonialItem[i].style.transform = 'translateX(' + `${(-width - 30) * sliderValue}px`;
-        }
+  testimonialRange.oninput = function () {
+    let sliderValue = this.value;
+    for (let i = 0; i < testimonialItem.length; i++) {
+      let width = (window.getComputedStyle(testimonialItem[i]).width).slice(0, 3)
+      testimonialItem[i].style.transform = 'translateX(' + `${(-width - 30) * sliderValue}px`;
     }
-    let isEvent = false;
-    window.onresize = () => {
-        if (document.documentElement.clientWidth < 1224 && isEvent == true) {
-            testimonialRange.value = 0;
-                for (let i = 0; i < testimonialItem.length; i++) {
-                    testimonialItem[i].style.transform = 'translateX(0px)';
-                }
-            isEvent = false;
-        }
-        if (document.documentElement.clientWidth > 1224 && isEvent == false) {
-            testimonialRange.value = 0;
-                for (let i = 0; i < testimonialItem.length; i++) {
-                    testimonialItem[i].style.transform = 'translateX(0px)';
-                }
-            isEvent = true;
-        }
-        if (document.documentElement.clientWidth < 999) {
-            testimonialRange.value = 0;
-                for (let i = 0; i < testimonialItem.length; i++) {
-                    testimonialItem[i].style.transform = 'translateX(0px)';
-                }
-        }
+  }
+  let isEvent = false;
+  window.onresize = () => {
+    if (document.documentElement.clientWidth < 1224 && isEvent == true) {
+      testimonialRange.value = 0;
+      for (let i = 0; i < testimonialItem.length; i++) {
+        testimonialItem[i].style.removeProperty('transform');
+      }
+      isEvent = false;
     }
+    if (document.documentElement.clientWidth > 1224 && isEvent == false) {
+      testimonialRange.value = 0;
+      for (let i = 0; i < testimonialItem.length; i++) {
+        testimonialItem[i].style.removeProperty('transform');
+      }
+      isEvent = true;
+    }
+    if (document.documentElement.clientWidth < 999) {
+      testimonialRange.value = 0;
+      for (let i = 0; i < testimonialItem.length; i++) {
+        testimonialItem[i].style.removeProperty('transform');
+      }
+    }
+  }
 }
