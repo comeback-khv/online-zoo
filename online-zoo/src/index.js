@@ -159,33 +159,42 @@ function closeTestimonial() {
     }
     console.log('e1')
 }
-
+xIconTestimonial.addEventListener('click', closeTestimonial);
 if (document.documentElement.clientWidth < 999) {
     xIconTestimonial.addEventListener('click', closeTestimonial);
     openTestimonial();
 }
 
-// Testimonials slider
+//Testimonials slider
 const testimonialRange = document.querySelector('.testimonials__input-range');
-if (document.documentElement.clientWidth > 1223) {
-    testimonialRange.oninput = function () {
-        for (let i = 0; i < testimonialItem.length; i++) {
-            testimonialItem[i].style.transform = 'translateX(' + `${-297 * this.value}px`;
-        }
+testimonialRange.oninput = function () {
+    let sliderValue = this.value;
+    for (let i = 0; i < testimonialItem.length; i++) {
+        let width = (window.getComputedStyle(testimonialItem[i]).width).slice(0, 3)
+        testimonialItem[i].style.transform = 'translateX(' + `${(-width - 30) * sliderValue}px`;
     }
 }
-if (document.documentElement.clientWidth > 900) {
-    testimonialRange.oninput = function () {
-        for (let i = 0; i < testimonialItem.length; i++) {
-            testimonialItem[i].style.transform = 'translateX(' + `${-323 * this.value}px`;
-        }
+let isEvent = false;
+window.onresize = () => {
+    if (document.documentElement.clientWidth < 1224 && isEvent == true) {
+        testimonialRange.value = 0;
+            for (let i = 0; i < testimonialItem.length; i++) {
+                testimonialItem[i].style.transform = 'translateX(0px)';
+            }
+        isEvent = false;
+    }
+    if (document.documentElement.clientWidth > 1224 && isEvent == false) {
+        testimonialRange.value = 0;
+            for (let i = 0; i < testimonialItem.length; i++) {
+                testimonialItem[i].style.transform = 'translateX(0px)';
+            }
+        isEvent = true;
+    }
+    if (document.documentElement.clientWidth < 999) {
+        testimonialRange.value = 0;
+            for (let i = 0; i < testimonialItem.length; i++) {
+                testimonialItem[i].style.transform = 'translateX(0px)';
+            }
     }
 }
 
-// Testimonials slider
-//const testimonialRange = document.querySelector('.testimonials__input-range');
-//testimonialRange.oninput = function () {
-//    for (let i = 0; i < testimonialItem.length; i++) {
-//        testimonialItem[i].style.transform = 'translateX(' + `${-290 * this.value}px`;
-//    }
-//}
