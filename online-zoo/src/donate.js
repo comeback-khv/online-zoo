@@ -22,8 +22,16 @@ function setOption() {
 setOption()
 if (donateInput) {
     donateInput.oninput = function () {
-        this.value = this.value.substr(0, 4);
+        this.value = this.value.substr(0, 4).replace(/[e,+,-]/g, '');
         let inputValue = this.value;
+        for (let i = 0; i < donateOption.length; i++) {
+            if (inputValue !== donateOption[i].id) {
+                for (let i = 0; i < donateOption.length; i++) {
+                    donatePrice[i].classList.remove('donate__price--active');
+                    donateLabel[i].classList.remove('donate__amount-range-label--active');
+                }
+            }
+        }
         for (let i = 0; i < donateOption.length; i++) {
             if (inputValue == donateOption[i].id) {
                 for (let i = 0; i < donateOption.length; i++) {
